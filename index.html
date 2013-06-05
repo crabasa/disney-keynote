@@ -305,26 +305,6 @@ twilio.sendSms({
 				]
 			});
 
-			var foo = 
-
-/*			channel.bind('new_call', function(data) {
-			  receivedCall(data);
-			});
-			
-			channel.bind('new_sms', function(params) {
-			  var number = formatNumber(params.From);
-			  if (number !== "XX") {
-			    displayCaller(number, params.Body);           
-			  } 
-			});
-
-			receivedCall = function(params) {
-			  var number = formatNumber(params.From);
-			  if (number !== "XX") {
-			    displayCaller(number);           
-			  }      
-			}*/
-
 			Reveal.addEventListener( 'demo', function() {
 				var pusher = new Pusher('60d86fcaa4f43f6b74ab');
 				var channel = pusher.subscribe('test_channel');
