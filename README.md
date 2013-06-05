@@ -1,4 +1,2 @@
-disney-keynote
-==============
+#Disney DevCentral Keynote
 
-Keynote for Disney's internal hackathon
