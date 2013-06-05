@@ -319,18 +319,20 @@ twilio.sendSms({
 				"img/lego-ironman.jpg",
 				"img/lego-captainamerica.jpg",
 				"img/lego-venom.jpg",
-				"img/lego-wolverine.jpg"
+				"img/lego-wolverine.png",
+				"img/lego-thor.jpg",
+				"img/lego-magneto.jpg"
 			];
 
 			var figure = function(src, number, text) {
 
 				this.x = Math.floor(Math.random()*$(window).height()/2);
 				this.y = Math.floor(Math.random()*$(window).width()/2);
-				this.dx = 1;
-				this.dy = 1;
+				this.dx = Math.random();
+				this.dy = Math.random();
 				  
-				this.speedx = 1;
-				this.speedy = 1;
+				this.speedx = 1+Math.random();
+				this.speedy = 1+Math.random();
 
 				this.src = src;
 
