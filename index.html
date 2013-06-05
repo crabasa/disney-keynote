@@ -162,7 +162,10 @@
 						<figcaption>Embrace Storytelling</figcaption>
 					</figure>
 					<aside class="notes" data-markdown>
-						
+				 	Computer Scientist<br/>
+				 	Apple Fellow<br/>
+				 	Disney Imagineer<br/>
+				 	"A computer is an instrument whos music is ideas"
 					</aside>
 				</section>
 				<section>
@@ -192,10 +195,10 @@ var checked = $('input:checked');
 					</aside>				
 				</section>
 				<section>
-					<h2>Web APIs</h2>
-					<p>
+					<figure>
 						<img src="img/roy.jpg"/>
-					</p>
+						<figcaption>Web APIs</figcaption>
+					</figure>
 					<aside class="notes">
 					One of the principle authors of the HTTP spec<br/>
 					Doctoral dissertation on REST<br/>
@@ -204,6 +207,12 @@ var checked = $('input:checked');
 				</section>
 				<section>
 					<h2>The Twilio API</h2>
+					<p class="fragment">Processing an SMS</p>
+					<pre class="fragment"><code class="xml" data-trim>
+&lt;Response&gt;
+	&lt;Sms&gt;Thank you for confirming your appointment, {{ fname }}&lt;/Sms&gt; 
+&lt;/Response&gt;
+					</code></pre>
 					<p class="fragment">Sending an SMS</p>
 					<pre class="fragment"><code data-trim>
 var twilio = require('twilio')(accountSid, authToken);
@@ -212,12 +221,6 @@ twilio.sendSms({
   from: "+19724457263", 
   body: "Hello " + fname + ", please reply YES to confirm your appointment"
 });
-					</code></pre>
-					<p class="fragment">Processing an SMS</p>
-					<pre class="fragment"><code class="xml" data-trim>
-&lt;Response&gt;
-	&lt;Sms&gt;Thank you for confirming your appointment, {{ fname }}&lt;/Sms&gt; 
-&lt;/Response&gt;
 					</code></pre>
 					<aside class="notes">
 
@@ -237,7 +240,11 @@ twilio.sendSms({
 				</section>				
 				<section>
 					<h3 class="fragment">Make more of the world addressable to programming</h3>
+					<br />
+					<br />
 					<h3 class="fragment">Improve the accessibility of your APIs</h3>
+					<br />
+					<br />
 					<h3 class="fragment">Commit yourself to helping more people learn how to code</h3>
 					<aside class="notes">
 					Every single programmer in this audience can decide to care about designing better APIs<br/>
@@ -257,7 +264,7 @@ twilio.sendSms({
 					<a href="http://www.nytimes.com/2011/11/06/education/edlife/why-science-majors-change-their-mind-its-just-so-darn-hard.html?_r=2">Why Science Majors Change Their Minds</a><br />
 					<a href="http://braythwayt.com/2013/04/29/calling-all-hackers.html">Calling All Hackers</a><br />
 					<a href="http://apieconomist.com/blog/2013/5/7/john-sheehan-wants-you-to-build-apis-that-speak-human">John Sheehan Wants You to Build APIs that Speak Human</a><br />
-					<a href="http://www.economist.com/news/finance-and-economics/21578041-containers-have-been-more-important-globalisation-freer-trade-humble">The humble hero</a>  <a href="http://www.twilio.com/blog/2012/08/how-to-tell-a-story-with-code-2.html">How to Tell a Story with Code</a> <a href="http://vimeo.com/36579366">Inventing on Principle</a>  <a href="http://webstandardssherpa.com/reviews/secrets-of-awesome-javascript-api-design">Secrets of Awesome JavaScript API Design</a>  <a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">Best Practices for Designing a Pragmatic RESTful API</a>  <a href=""></a> </p>
+					<a href="http://www.economist.com/news/finance-and-economics/21578041-containers-have-been-more-important-globalisation-freer-trade-humble">Shipping Containers: The Humble Hero</a>  <a href="http://www.twilio.com/blog/2012/08/how-to-tell-a-story-with-code-2.html">How to Tell a Story with Code</a> <a href="http://vimeo.com/36579366">Inventing on Principle</a>  <a href="http://webstandardssherpa.com/reviews/secrets-of-awesome-javascript-api-design">Secrets of Awesome JavaScript API Design</a>  <a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">Best Practices for Designing a Pragmatic RESTful API</a> 
 				</section>	
 			</div>
 
