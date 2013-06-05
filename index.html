@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>APIs and Making Humankind Better at Programming</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Carter Rabasa">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/slick.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--link rel="stylesheet" href="css/fullscreen-img.css"-->
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<style>
+			.figure {
+				position:absolute;
+			}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>APIs and Making Humankind Better at Programming</h1>
+					<h3>Carter Rabasa</h3>
+					<h3>Developer Evangelist Manager</h3>
+					<h3>Twilio</h3>
+				</section>
+				<section>
+					<h2>@carterrabasa</h2>
+					<br />
+					<h2>carter@twilio.com</h2>
+					<br />
+					<h2>carter.rabasa.com</h2>
+				</section>
+				<section>
+					<h1>I'm a Dad</h1>
+				</section>
+				<section>
+					<figure>
+  						<img src="img/cate_em.jpg">
+  						<figcaption>Emily and Catherine</figcaption>
+					</figure>
+					<aside class="notes">
+					Think more about the future (their future)<br />
+					Think more about gender issues in technology
+					</aside>
+				</section>
+
+				<section>
+					<h1>Software All the Things</h1>
+				</section>
+				<section>
+					<figure>
+						<img src="img/andreessen.jpg"/>
+						<figcaption>Software is Eating the World</figcaption>
+					</figure>
+					<aside class="notes">					
+					Retail marketing - Google, Groupon, Foursquare<br/>
+					Telecom - Twilio, Skype<br/>
+					Education - Kahn Academy, Codecademy
+					</aside>
+				</section>				
+				<!--section>
+					<h2>Tesla</h2>
+					<p><img src="img/elon.jpg"/></p>
+					<aside class="notes">
+					Elon Musk founded PayPal<br/>
+					"With each mile driven by the fleet of Roadsters comes insight to fine-tuning the functionality of the Roadster systems."<br/>
+					Cars have an API<br/>
+					</aside>
+				</section-->				
+				<section>
+					<figure>
+						<img src="img/jeffiel.jpg"/>
+						<figcaption>More of the World's Problems are Addressable by Software People</figcaption>
+					</figure>
+					<aside class="notes">
+					People who view the world through the lense of software<br/>
+					Any problem can be solved once it is in the domain of software<br/>
+					Remote controls vs. Apple remote<br/>
+					POS systems vs. Square<br/>
+					Thermostat vs. Nest
+					</aside>
+				</section>	
+				<section>
+					<h1>Programming is the New Literacy</h1>
+				</section>			
+				<section>
+					<figure>
+						<img src="img/printing-press.jpg"/>
+						<figcaption>Literacy: 1440 - 2013</figcaption>
+					</figure>
+					<aside class="notes">
+					1440 - 30% literacy<br/>
+					Better health<br/>
+					greater social equality<br/>
+					increased economic prosperity	
+					</aside>
+				</section>				
+				<section>
+					<h1>Young People Are Not Embracing Programming</h1>
+				</section>			
+				<section>
+					<figure>
+						<img src="img/stem.jpg"/>
+						<figcaption>STEM Enrollment is Stagnating</figcaption>
+					</figure>
+					<aside class="notes">
+					I'm not worried about kids, I'm worried about adults.
+					</aside>
+				</section>	
+				<section>
+					<figure>
+						<img src=""/>
+						<figcaption>Social Unrest and Inequality</figcaption>
+					</figure>
+					<aside class="notes">
+					
+					</aside>
+				</section>				
+				<section>
+					<h1>How Do We Fix This?</h1>
+				</section>			
+				<section>
+					<figure>
+						<img src="img/inventing.png"/>
+						<figcaption>Don't Let Ideas Die</figcaption>
+					</figure>
+					<aside class="notes">
+					Brett Victor (Apple, <a targe="_new" href="http://www.youtube.com/watch?v=PUv66718DII&feature=youtu.be&t=2m33s">Inventing on Principle</a>)<br/>
+					Creators need an immediate connection to what they create<br/>
+					When ideas die, it’s a moral wrong (this is a social movement, like fighting censorship)<br/>
+					</aside>
+				</section>	
+				<section>
+					<figure>
+						<img src="img/alankay.jpg"/>
+						<figcaption>Embrace Storytelling</figcaption>
+					</figure>
+					<aside class="notes" data-markdown>
+						
+					</aside>
+				</section>
+				<section>
+					<h1>Application Programming Interfaces</h1>
+				</section>			
+				<section>
+					<h2>What is an API?</h2>
+					<p class="fragment">Find the boxes that are checked</p>
+					<p class="fragment">JavaScript DOM API</p>
+					<pre class="fragment"><code data-trim>
+					var checked = [];
+var nodeList = document.getElementsByTagName('input');
+for (var i = 0; i < nodeList.length; i++) {
+  if (nodeList[i].checked) {
+    checked.push(nodeList[i])
+  }
+}
+					</code></pre>
+					<p class="fragment">jQuery API</p>
+					<pre class="fragment"><code data-trim>
+var checked = $('input:checked');
+					</code></pre>
+					<aside class="notes">
+					Languages - syntax, semantics and grammar
+					DOM API is hard to use and understand<br/>
+					jQuery teaches us the value of form in addition to function
+					</aside>				
+				</section>
+				<section>
+					<h2>Web APIs</h2>
+					<p>
+						<img src="img/roy.jpg"/>
+					</p>
+					<aside class="notes">
+					One of the principle authors of the HTTP spec<br/>
+					Doctoral dissertation on REST<br/>
+					RESTful APIs
+					</aside>
+				</section>
+				<section>
+					<h2>The Twilio API</h2>
+					<p class="fragment">Sending an SMS</p>
+					<pre class="fragment"><code data-trim>
+var twilio = require('twilio')(accountSid, authToken);
+twilio.sendSms({
+  to:   "+15555551212", 
+  from: "+19724457263", 
+  body: "Hello " + fname + ", please reply YES to confirm your appointment"
+});
+					</code></pre>
+					<p class="fragment">Processing an SMS</p>
+					<pre class="fragment"><code class="xml" data-trim>
+&lt;Response&gt;
+	&lt;Sms&gt;Thank you for confirming your appointment, {{ fname }}&lt;/Sms&gt; 
+&lt;/Response&gt;
+					</code></pre>
+					<aside class="notes">
+
+					</aside>
+				</section>	
+				<section data-state="demo" id="demo">
+					<h2>Please SMS</h2>
+					<h1>(XXX) XXX-XXXX</h1>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>Calling All Hackers</h1>
+				</section>				
+				<section>
+					<h3 class="fragment">Make more of the world addressable to programming</h3>
+					<h3 class="fragment">Improve the accessibility of your APIs</h3>
+					<h3 class="fragment">Commit yourself to helping more people learn how to code</h3>
+					<aside class="notes">
+					Every single programmer in this audience can decide to care about designing better APIs<br/>
+					What can we learn from containerization?
+					</aside>
+				</section>
+				<section>
+					<h1>Thank You</h1>
+					<h3>Carter Rabasa</h3>
+					<h4>@CarterRabasa &#9734; carter@twilio.com</h4>
+				</section>	
+
+				<section>
+					<h1>Links</h1>
+					<a href="http://readwrite.com/2012/05/17/computer-programming-for-all-a-new-standard-of-literacy">Computer Programming for All: A New Standard of Literacy</a><br/>
+					<a href="http://www.slideshare.net/twilio/2013-02-software-people-10-minute-version">Software People</a><br />
+					<a href="http://www.nytimes.com/2011/11/06/education/edlife/why-science-majors-change-their-mind-its-just-so-darn-hard.html?_r=2">Why Science Majors Change Their Minds</a><br />
+					<a href="http://braythwayt.com/2013/04/29/calling-all-hackers.html">Calling All Hackers</a><br />
+					<a href="http://apieconomist.com/blog/2013/5/7/john-sheehan-wants-you-to-build-apis-that-speak-human">John Sheehan Wants You to Build APIs that Speak Human</a><br />
+					<a href="http://www.economist.com/news/finance-and-economics/21578041-containers-have-been-more-important-globalisation-freer-trade-humble">The humble hero</a>  <a href="http://www.twilio.com/blog/2012/08/how-to-tell-a-story-with-code-2.html">How to Tell a Story with Code</a> <a href="http://vimeo.com/36579366">Inventing on Principle</a>  <a href="http://webstandardssherpa.com/reviews/secrets-of-awesome-javascript-api-design">Secrets of Awesome JavaScript API Design</a>  <a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">Best Practices for Designing a Pragmatic RESTful API</a>  <a href=""></a> </p>
+				</section>	
+			</div>
+
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+		<script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				width: 1280,
+    			height: 800,
+
+				theme: Reveal.getQueryHash().theme || 'slick', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					//,{ src: 'lib/js/fullscreen-img.js' }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+			var foo = 
+
+/*			channel.bind('new_call', function(data) {
+			  receivedCall(data);
+			});
+			
+			channel.bind('new_sms', function(params) {
+			  var number = formatNumber(params.From);
+			  if (number !== "XX") {
+			    displayCaller(number, params.Body);           
+			  } 
+			});
+
+			receivedCall = function(params) {
+			  var number = formatNumber(params.From);
+			  if (number !== "XX") {
+			    displayCaller(number);           
+			  }      
+			}*/
+
+			Reveal.addEventListener( 'demo', function() {
+				var pusher = new Pusher('60d86fcaa4f43f6b74ab');
+				var channel = pusher.subscribe('test_channel');
+				channel.bind('my_event', function(data) {
+					var i = Math.floor(Math.random() * figures.length)
+      				var fig = new figure(figures[i], data.from, data.body);
+   				});
+			}, false );
+
+			var figures = [
+				"img/lego-spiderman.jpg",
+				"img/lego-ironman.jpg",
+				"img/lego-captainamerica.jpg",
+				"img/lego-venom.jpg",
+				"img/lego-wolverine.jpg"
+			];
+
+			var figure = function(src, number, text) {
+
+				this.x = Math.floor(Math.random()*$(window).height()/2);
+				this.y = Math.floor(Math.random()*$(window).width()/2);
+				this.dx = 1;
+				this.dy = 1;
+				  
+				this.speedx = 1;
+				this.speedy = 1;
+
+				this.src = src;
+
+
+				  
+				var div = $("<div class='figure' />");
+				  
+				var img = new Image();
+				  
+				this.render = function() {
+					img.src = src;
+				    img.width = 100;
+				    img.style.top = 0;
+				    img.style.left = 0;
+				    div.append(img);
+				    if (text === undefined)
+				      text = "CALL";
+				    div.append("<div class='text'>"+number+": "+text+"</div>");
+				    $('#demo').append(div);
+				    
+				    div = div[0];
+				}
+				  
+				this.move = function() {
+				    var that = this;
+				    this.x = this.x + (this.speedx * this.dx);
+				    this.y = this.y + (this.speedy * this.dy);
+				    div.style.top = this.y+"px";
+				    div.style.left = this.x+"px";
+				    
+				    var wh = $(window).height();
+				    var ww = $(window).width();
+				    
+				    if (this.x >= ww - img.width) {
+				      this.dx = -1;
+				    }
+				    
+				    if (this.y >= wh - img.height) {
+				      this.dy = -1;
+				    } 
+				    
+				    if (this.x <= 0) {
+				      this.dx = 1;
+				    }
+				    
+				    if (this.y <= 0) {
+				      this.dy = 1;
+				    }
+				    
+				    
+				    var t = setTimeout(function() {
+				      that.move();
+				    }, 20);
+				}
+				  
+				this.render();
+				this.move();
+				  
+				return this;
+				
+			};
+
+		</script>
+
+	</body>
+</html>

@@ -1,4 +1,1 @@
-disney-keynote
-==============
-
-Keynote for Disney's internal hackathon
+JSConf 2013 - 
